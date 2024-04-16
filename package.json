@@ -1,0 +1,9 @@
+{
+  "name": "translator",
+  "scripts": {
+    "translate": "node src/index.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
