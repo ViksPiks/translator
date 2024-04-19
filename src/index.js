@@ -42,7 +42,7 @@ async function runTranslator() {
   worksheet.getColumn(1).eachCell((cell, rowNumber) => {
     const { value } = worksheet.getRow(rowNumber).getCell(2);
 
-    htmlFile = htmlFile.replace(cell.value, value);
+    htmlFile = htmlFile.replace(`>${cell.value.trim()}<`, `>${value.trim()}<`);
   });
 
   await saveToNewHTMLFile(htmlFile);
